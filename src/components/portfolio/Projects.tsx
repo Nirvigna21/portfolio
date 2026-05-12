@@ -72,10 +72,10 @@ export function Projects() {
                   ))}
                 </div>
                 <div className="mt-5 flex items-center gap-2">
-                  <a href="#" className="inline-flex items-center gap-1.5 rounded-full bg-white/5 hover:bg-white/10 px-3 py-1.5 text-xs transition-colors">
+                  <a href={p.codeUrl ?? "#"} className="inline-flex items-center gap-1.5 rounded-full bg-white/5 hover:bg-white/10 px-3 py-1.5 text-xs transition-colors">
                     <Github className="h-3 w-3" /> Code
                   </a>
-                  <a href="#" className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-neon-blue to-neon-purple px-3 py-1.5 text-xs text-primary-foreground">
+                  <a href={p.demoUrl ?? "#"} className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-neon-blue to-neon-purple px-3 py-1.5 text-xs text-primary-foreground">
                     Live demo <ArrowUpRight className="h-3 w-3" />
                   </a>
                 </div>
