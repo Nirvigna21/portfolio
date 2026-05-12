@@ -1,14 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
-const links = [
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#blogs", label: "Blogs" },
-  { href: "#volunteer", label: "Volunteer" },
-  { href: "#contact", label: "Contact" },
-];
+import { navLinks as links, profile } from "@/content/portfolio";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,9 +26,9 @@ export function Nav() {
         }`}>
           <a href="#top" className="flex items-center gap-2 font-display font-semibold tracking-tight">
             <span className="relative inline-flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-neon-blue to-neon-purple text-[10px] text-primary-foreground glow-ring">
-              AS
+              {profile.initials}
             </span>
-            <span className="hidden sm:inline text-sm">aarav.dev</span>
+            <span className="hidden sm:inline text-sm">{profile.siteLabel}</span>
           </a>
           <nav className="hidden md:flex items-center gap-1">
             {links.map((l) => (
