@@ -2,18 +2,9 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ArrowUpRight, Github } from "lucide-react";
 import { SectionLabel } from "./About";
-import ai from "@/assets/project-ai.jpg";
-import web from "@/assets/project-web.jpg";
-import bc from "@/assets/project-blockchain.jpg";
-import data from "@/assets/project-data.jpg";
+import { projects as PROJECTS, type ProjectCat } from "@/content/portfolio";
 
-type Cat = "All" | "AI/ML" | "Web" | "Blockchain" | "Data" | "Java";
-
-const PROJECTS: { title: string; desc: string; tech: string[]; cat: Cat; img: string; featured?: boolean }[] = [
-  { title: "NeuroCast", desc: "Real-time emotion-aware video conferencing using a custom CNN trained on FER+.", tech: ["PyTorch", "WebRTC", "FastAPI"], cat: "AI/ML", img: ai, featured: true },
-  { title: "Lumen Analytics", desc: "Dashboard for SaaS metrics with predictive churn forecasting.", tech: ["Next.js", "PostgreSQL", "tRPC"], cat: "Web", img: web, featured: true },
-  { title: "ChainVote", desc: "Tamper-proof voting dApp on Polygon with zero-knowledge ballots.", tech: ["Solidity", "Hardhat", "React"], cat: "Blockchain", img: bc },
-  { title: "PulseBoard", desc: "Real-time financial telemetry with anomaly detection on streaming data.", tech: ["Python", "Kafka", "Power BI"], cat: "Data", img: data },
+type Cat = "All" | ProjectCat;
   { title: "Reverie LLM", desc: "Personal RAG assistant for academic notes with citation grounding.", tech: ["LangChain", "pgvector", "Next.js"], cat: "AI/ML", img: ai },
   { title: "Forge Banking", desc: "JavaFX core-banking simulator with audit-grade transaction ledger.", tech: ["Java", "JavaFX", "MySQL"], cat: "Java", img: web },
 ];
