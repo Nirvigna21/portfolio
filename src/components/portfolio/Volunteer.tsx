@@ -1,41 +1,9 @@
 import { motion } from "framer-motion";
-import { Heart, Users, Sprout, BookOpen } from "lucide-react";
+import { Heart, Users, Sprout, BookOpen, type LucideIcon } from "lucide-react";
 import { SectionLabel } from "./About";
+import { volunteer as WORK } from "@/content/portfolio";
 
-const WORK = [
-  {
-    Icon: BookOpen,
-    org: "Code for Kids",
-    role: "Mentor & Workshop Lead",
-    period: "2024 — Present",
-    desc: "Teach weekend Python and web basics to 60+ middle-school students from underserved schools across Bengaluru.",
-    accent: "from-neon-pink to-neon-orange",
-  },
-  {
-    Icon: Sprout,
-    org: "GreenStep India",
-    role: "Tech Volunteer",
-    period: "2023 — Present",
-    desc: "Built a lightweight tree-planting tracker used by 14 local chapters to log 2,400+ saplings and verify GPS data.",
-    accent: "from-neon-cyan to-neon-blue",
-  },
-  {
-    Icon: Users,
-    org: "GDSC VIT",
-    role: "AI/ML Lead",
-    period: "2024 — 2025",
-    desc: "Ran a year-long peer-learning track: 12 hands-on sessions, two hackathons, and an end-of-year showcase night.",
-    accent: "from-neon-purple to-neon-pink",
-  },
-  {
-    Icon: Heart,
-    org: "Smile Foundation",
-    role: "Fundraising Volunteer",
-    period: "2023",
-    desc: "Designed the campaign microsite and helped raise ₹3.2L for primary education across three rural districts.",
-    accent: "from-neon-yellow to-neon-orange",
-  },
-];
+const ICONS: Record<string, LucideIcon> = { Heart, Users, Sprout, BookOpen };
 
 export function Volunteer() {
   return (
@@ -58,9 +26,14 @@ export function Volunteer() {
             >
               <div className={`absolute -top-20 -left-20 h-56 w-56 rounded-full bg-gradient-to-br ${w.accent} opacity-25 blur-3xl transition-opacity group-hover:opacity-50`} />
               <div className="relative flex items-start gap-4">
-                <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${w.accent} text-primary-foreground glow-ring`}>
-                  <w.Icon className="h-5 w-5" />
-                </div>
+                {(() => {
+                  const Icon = ICONS[w.icon] ?? Heart;
+                  return (
+                    <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${w.accent} text-primary-foreground glow-ring`}>
+                      <Icon className="h-5 w-5" />
+                    </div>
+                  );
+                })()}
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center justify-between gap-3">
                     <h3 className="font-display text-lg font-semibold">{w.org}</h3>
