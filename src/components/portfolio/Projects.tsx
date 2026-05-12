@@ -5,9 +5,6 @@ import { SectionLabel } from "./About";
 import { projects as PROJECTS, type ProjectCat } from "@/content/portfolio";
 
 type Cat = "All" | ProjectCat;
-  { title: "Reverie LLM", desc: "Personal RAG assistant for academic notes with citation grounding.", tech: ["LangChain", "pgvector", "Next.js"], cat: "AI/ML", img: ai },
-  { title: "Forge Banking", desc: "JavaFX core-banking simulator with audit-grade transaction ledger.", tech: ["Java", "JavaFX", "MySQL"], cat: "Java", img: web },
-];
 
 const CATS: Cat[] = ["All", "AI/ML", "Web", "Blockchain", "Data", "Java"];
 
