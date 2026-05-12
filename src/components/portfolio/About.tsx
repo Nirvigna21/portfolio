@@ -58,28 +58,6 @@ export function About() {
             </div>
           </motion.div>
 
-          {/* timeline */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-            className="lg:col-span-12 glass rounded-3xl p-8"
-          >
-            <div className="text-xs uppercase tracking-widest text-muted-foreground">Journey</div>
-            <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {[
-                { y: "2022", t: "Started B.Tech CSE", d: "Began my journey at VIT, fell for algorithms." },
-                { y: "2023", t: "First ML paper", d: "Co-authored a CV paper on micro-expression detection." },
-                { y: "2024", t: "Full-stack era", d: "Shipped 12 React apps; learned to love the front-end." },
-                { y: "2025", t: "AI Research Intern", d: "Worked on LLM evaluation pipelines at scale." },
-              ].map((m) => (
-                <div key={m.y} className="relative pl-5">
-                  <span className="absolute left-0 top-1.5 h-2 w-2 rounded-full bg-neon-cyan glow-ring" />
-                  <div className="font-mono text-xs text-neon-cyan">{m.y}</div>
-                  <div className="mt-1 font-medium">{m.t}</div>
-                  <div className="mt-1 text-sm text-muted-foreground">{m.d}</div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
