@@ -1,33 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Clock } from "lucide-react";
 import { SectionLabel } from "./About";
-
-const POSTS = [
-  {
-    tag: "AI / ML",
-    title: "Demystifying RAG: A practical field guide",
-    desc: "What I learned shipping retrieval pipelines on real-world docs — chunking, rerankers, and the eval harness nobody talks about.",
-    read: "8 min read",
-    date: "Apr 2026",
-    accent: "from-neon-purple to-neon-pink",
-  },
-  {
-    tag: "Engineering",
-    title: "From notebooks to production: a student's playbook",
-    desc: "How I take a Jupyter prototype and turn it into a deployed FastAPI service my classmates actually use.",
-    read: "6 min read",
-    date: "Feb 2026",
-    accent: "from-neon-blue to-neon-cyan",
-  },
-  {
-    tag: "Career",
-    title: "Landing your first ML internship in 2026",
-    desc: "A blunt, honest breakdown of resumes, projects, cold emails and interview loops — written from the trenches.",
-    read: "10 min read",
-    date: "Jan 2026",
-    accent: "from-neon-orange to-neon-yellow",
-  },
-];
+import { blogs as POSTS } from "@/content/portfolio";
 
 export function Blogs() {
   return (
@@ -42,7 +16,7 @@ export function Blogs() {
           {POSTS.map((p, i) => (
             <motion.a
               key={p.title}
-              href="#"
+              href={p.url}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
