@@ -1,16 +1,6 @@
 import { motion } from "framer-motion";
 import { SectionLabel } from "./About";
-
-const SKILLS = [
-  { cat: "Languages", items: ["Java", "Python", "JavaScript", "TypeScript", "C++", "SQL"] },
-  { cat: "Web", items: ["React", "Next.js", "Node.js", "Tailwind", "HTML/CSS", "Express"] },
-  { cat: "AI / ML", items: ["PyTorch", "TensorFlow", "Scikit-learn", "Hugging Face", "LangChain"] },
-  { cat: "Data", items: ["Pandas", "NumPy", "Power BI", "Matplotlib", "Tableau"] },
-  { cat: "Databases", items: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Supabase"] },
-  { cat: "Cloud / Tools", items: ["AWS", "Vercel", "Docker", "Git/GitHub", "Linux", "Figma"] },
-];
-
-const MARQUEE = ["Java", "Python", "React", "PyTorch", "Next.js", "TypeScript", "AWS", "Docker", "MongoDB", "TensorFlow", "Power BI", "GraphQL", "Node.js", "Tailwind", "LangChain", "PostgreSQL"];
+import { skills as SKILLS, skillsMarquee as MARQUEE } from "@/content/portfolio";
 
 export function Skills() {
   return (
