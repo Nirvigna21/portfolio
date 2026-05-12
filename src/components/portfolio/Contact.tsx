@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, MapPin, Send } from "lucide-react";
 import { SectionLabel } from "./About";
+import { profile } from "@/content/portfolio";
 
 export function Contact() {
   return (
@@ -44,26 +45,26 @@ export function Contact() {
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
             className="lg:col-span-2 grid gap-3 content-start"
           >
-            <a href="mailto:hello@aarav.dev" className="glass rounded-2xl p-5 flex items-center gap-4 hover:bg-white/[0.06] transition-colors">
+            <a href={`mailto:${profile.email}`} className="glass rounded-2xl p-5 flex items-center gap-4 hover:bg-white/[0.06] transition-colors">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-neon-blue to-neon-purple">
                 <Mail className="h-4 w-4 text-primary-foreground" />
               </div>
               <div>
                 <div className="text-xs text-muted-foreground">Email</div>
-                <div className="text-sm font-medium">hello@aarav.dev</div>
+                <div className="text-sm font-medium">{profile.email}</div>
               </div>
             </a>
-            <a href="#" className="glass rounded-2xl p-5 flex items-center gap-4 hover:bg-white/[0.06] transition-colors">
+            <a href={profile.github.url} className="glass rounded-2xl p-5 flex items-center gap-4 hover:bg-white/[0.06] transition-colors">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5"><Github className="h-4 w-4" /></div>
-              <div><div className="text-xs text-muted-foreground">GitHub</div><div className="text-sm font-medium">@aaravsharma</div></div>
+              <div><div className="text-xs text-muted-foreground">GitHub</div><div className="text-sm font-medium">{profile.github.handle}</div></div>
             </a>
-            <a href="#" className="glass rounded-2xl p-5 flex items-center gap-4 hover:bg-white/[0.06] transition-colors">
+            <a href={profile.linkedin.url} className="glass rounded-2xl p-5 flex items-center gap-4 hover:bg-white/[0.06] transition-colors">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5"><Linkedin className="h-4 w-4" /></div>
-              <div><div className="text-xs text-muted-foreground">LinkedIn</div><div className="text-sm font-medium">in/aaravsharma</div></div>
+              <div><div className="text-xs text-muted-foreground">LinkedIn</div><div className="text-sm font-medium">{profile.linkedin.handle}</div></div>
             </a>
             <div className="glass rounded-2xl p-5 flex items-center gap-4">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5"><MapPin className="h-4 w-4" /></div>
-              <div><div className="text-xs text-muted-foreground">Based in</div><div className="text-sm font-medium">Bengaluru, India</div></div>
+              <div><div className="text-xs text-muted-foreground">Based in</div><div className="text-sm font-medium">{profile.basedIn}</div></div>
             </div>
           </motion.div>
         </div>
@@ -89,7 +90,7 @@ export function Footer() {
   return (
     <footer className="border-t border-white/5 py-10">
       <div className="mx-auto max-w-6xl px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-        <div>© {new Date().getFullYear()} Aarav Sharma. Crafted with care.</div>
+        <div>© {new Date().getFullYear()} {profile.footerName}. Crafted with care.</div>
         <div className="flex items-center gap-2 font-mono">
           <span className="h-1.5 w-1.5 rounded-full bg-neon-cyan animate-pulse" />
           system online · v1.0
