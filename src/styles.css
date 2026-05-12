@@ -39,6 +39,9 @@
   --color-neon-cyan: var(--neon-cyan);
   --color-neon-blue: var(--neon-blue);
   --color-neon-purple: var(--neon-purple);
+  --color-neon-pink: var(--neon-pink);
+  --color-neon-orange: var(--neon-orange);
+  --color-neon-yellow: var(--neon-yellow);
   --color-glass: var(--glass);
 }
 
