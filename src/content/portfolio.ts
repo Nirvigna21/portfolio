@@ -80,6 +80,8 @@ export const projects: {
   { title: "Lumen Analytics", desc: "Dashboard for SaaS metrics with predictive churn forecasting.", tech: ["Next.js", "PostgreSQL", "tRPC"], cat: "Web", img: projWeb, featured: true, codeUrl: "#", demoUrl: "#" },
   { title: "ChainVote", desc: "Tamper-proof voting dApp on Polygon with zero-knowledge ballots.", tech: ["Solidity", "Hardhat", "React"], cat: "Blockchain", img: projBc, codeUrl: "#", demoUrl: "#" },
   { title: "PulseBoard", desc: "Real-time financial telemetry with anomaly detection on streaming data.", tech: ["Python", "Kafka", "Power BI"], cat: "Data", img: projData, codeUrl: "#", demoUrl: "#" },
+  { title: "Reverie LLM", desc: "Personal RAG assistant for academic notes with citation grounding.", tech: ["LangChain", "pgvector", "Next.js"], cat: "AI/ML", img: projAi, codeUrl: "#", demoUrl: "#" },
+  { title: "Forge Banking", desc: "JavaFX core-banking simulator with audit-grade transaction ledger.", tech: ["Java", "JavaFX", "MySQL"], cat: "Java", img: projWeb, codeUrl: "#", demoUrl: "#" },
 ];
 
 export const blogs = [
