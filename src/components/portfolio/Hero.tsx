@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowDown, Download, Github, Linkedin, Mail, Code2, Sparkles } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { profile } from "@/content/portfolio";
 
-const ROLES = ["AI/ML Enthusiast", "Full Stack Developer", "Problem Solver", "Tech Explorer"];
+const ROLES = profile.roles;
+const heroBg = profile.heroBg;
 
 export function Hero() {
   const [roleIdx, setRoleIdx] = useState(0);
