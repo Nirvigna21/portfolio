@@ -40,12 +40,12 @@ export function Hero() {
         >
           <div className="mb-8 inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs text-muted-foreground">
             <Sparkles className="h-3 w-3 text-neon-purple" />
-            Hi, I'm a Computer Science student · Class of 2027
+            {profile.introBadge}
           </div>
 
           <h1 className="font-display text-5xl sm:text-7xl md:text-8xl font-semibold leading-[0.95]">
-            <span className="block text-foreground">Aarav</span>
-            <span className="block text-gradient">Sharma.</span>
+            <span className="block text-foreground">{profile.firstName}</span>
+            <span className="block text-gradient">{profile.lastName}</span>
           </h1>
 
           <div className="mt-8 flex h-8 items-center justify-center overflow-hidden font-mono text-sm sm:text-base text-muted-foreground">
@@ -64,8 +64,7 @@ export function Hero() {
           </div>
 
           <p className="mt-6 max-w-xl text-balance text-base sm:text-lg text-muted-foreground">
-            I craft intelligent systems and elegant interfaces — bridging machine learning research
-            with production-grade web experiences.
+            {profile.tagline}
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -77,7 +76,7 @@ export function Hero() {
               View Projects
             </a>
             <a
-              href="#"
+              href={profile.resumeUrl}
               className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium hover:bg-white/10 transition-colors"
             >
               <Download className="h-4 w-4" />
@@ -93,10 +92,10 @@ export function Hero() {
 
           <div className="mt-12 flex items-center gap-2">
             {[
-              { Icon: Github, label: "GitHub", href: "#" },
-              { Icon: Linkedin, label: "LinkedIn", href: "#" },
-              { Icon: Mail, label: "Email", href: "#" },
-              { Icon: Code2, label: "LeetCode", href: "#" },
+              { Icon: Github, label: "GitHub", href: profile.github.url },
+              { Icon: Linkedin, label: "LinkedIn", href: profile.linkedin.url },
+              { Icon: Mail, label: "Email", href: `mailto:${profile.email}` },
+              { Icon: Code2, label: "LeetCode", href: profile.leetcode },
             ].map(({ Icon, label, href }) => (
               <a
                 key={label}
