@@ -29,9 +29,9 @@ export function Projects() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
-            <SectionLabel>03 — Selected Work</SectionLabel>
+            <SectionLabel>03 — Projects</SectionLabel>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl font-semibold leading-tight">
-              Projects worth <span className="text-gradient">talking about</span>.
+              <span className="text-gradient">Projects</span>.
             </h2>
           </div>
           <div className="flex flex-wrap gap-2">

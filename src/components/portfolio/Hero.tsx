@@ -38,8 +38,8 @@ export function Hero() {
           className="flex flex-col items-center text-center"
         >
           <div className="mb-8 inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs text-muted-foreground">
-            <Sparkles className="h-3 w-3 text-neon-cyan" />
-            Computer Science · Class of 2026
+            <Sparkles className="h-3 w-3 text-neon-purple" />
+            Hi, I'm a Computer Science student · Class of 2027
           </div>
 
           <h1 className="font-display text-5xl sm:text-7xl md:text-8xl font-semibold leading-[0.95]">
@@ -107,26 +107,6 @@ export function Hero() {
               </a>
             ))}
           </div>
-        </motion.div>
-
-        {/* Bento stat strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.7 }}
-          className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-3"
-        >
-          {[
-            { v: "30+", l: "Projects shipped" },
-            { v: "650+", l: "DSA problems" },
-            { v: "8.9", l: "CGPA" },
-            { v: "12", l: "Certifications" },
-          ].map((s) => (
-            <div key={s.l} className="glass rounded-2xl p-5 text-center">
-              <div className="text-2xl sm:text-3xl font-display font-semibold text-gradient">{s.v}</div>
-              <div className="mt-1 text-xs text-muted-foreground">{s.l}</div>
-            </div>
-          ))}
         </motion.div>
       </div>
     </section>
