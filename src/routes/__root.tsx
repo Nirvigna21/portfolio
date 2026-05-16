@@ -72,10 +72,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Aarav Sharma — AI/ML Engineer & Full Stack Developer" },
+      { title: "Nirvigna Dumalwad — AI/ML Engineer & Full Stack Developer" },
       { name: "description", content: "Premium portfolio of Aarav Sharma — Computer Science student, AI/ML enthusiast, and full stack developer building intelligent, beautiful products." },
-      { name: "author", content: "Aarav Sharma" },
-      { property: "og:title", content: "Aarav Sharma — AI/ML Engineer & Full Stack Developer" },
+      { name: "author", content: "Nirvigna Dumalwad" },
+      { property: "og:title", content: "Nirvigna Dumalwad — AI/ML Engineer & Full Stack Developer" },
       { property: "og:description", content: "Premium portfolio — AI, full stack, problem solving." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

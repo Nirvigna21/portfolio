@@ -1,46 +1,21 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { ArrowUpRight, Github } from "lucide-react";
 import { SectionLabel } from "./About";
-import { projects as PROJECTS, type ProjectCat } from "@/content/portfolio";
-
-type Cat = "All" | ProjectCat;
-
-const CATS: Cat[] = ["All", "AI/ML", "Web", "Blockchain", "Data", "Java"];
+import { projects as PROJECTS } from "@/content/portfolio";
 
 export function Projects() {
-  const [cat, setCat] = useState<Cat>("All");
-  const filtered = cat === "All" ? PROJECTS : PROJECTS.filter((p) => p.cat === cat);
-
   return (
     <section id="projects" className="relative py-32">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div>
-            <SectionLabel>03 — Projects</SectionLabel>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl font-semibold leading-tight">
-              <span className="text-gradient">Projects</span>.
-            </h2>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {CATS.map((c) => (
-              <button
-                key={c}
-                onClick={() => setCat(c)}
-                className={`rounded-full px-4 py-1.5 text-xs font-medium transition-all border ${
-                  cat === c
-                    ? "border-transparent bg-gradient-to-r from-neon-blue to-neon-purple text-primary-foreground glow"
-                    : "border-white/10 text-muted-foreground hover:text-foreground hover:bg-white/5"
-                }`}
-              >
-                {c}
-              </button>
-            ))}
-          </div>
+        <div>
+          <SectionLabel>03 — Projects</SectionLabel>
+          <h2 className="mt-3 font-display text-4xl sm:text-5xl font-semibold leading-tight">
+            <span className="text-gradient">Projects</span>.
+          </h2>
         </div>
 
         <motion.div layout className="mt-12 grid grid-cols-1 md:grid-cols-6 gap-4">
-          {filtered.map((p, i) => (
+          {PROJECTS.map((p, i) => (
             <motion.article
               layout
               key={p.title}
@@ -54,9 +29,6 @@ export function Projects() {
                 <img src={p.img} alt={p.title} loading="lazy" width={1024} height={768}
                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
-                <span className="absolute top-3 left-3 rounded-full bg-black/40 backdrop-blur px-3 py-1 text-[10px] uppercase tracking-widest text-neon-cyan border border-white/10">
-                  {p.cat}
-                </span>
               </div>
               <div className="p-6">
                 <div className="flex items-start justify-between gap-3">
