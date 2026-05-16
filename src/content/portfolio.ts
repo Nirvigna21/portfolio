@@ -27,14 +27,14 @@ export const profile = {
   roles: ["AI/ML Enthusiast", "Full Stack Developer", "Problem Solver", "Tech Explorer"],
   tagline:
     "I craft intelligent systems and elegant interfaces — bridging machine learning research with production-grade web experiences.",
-  resumeUrl: "#", // link to your resume PDF
+  resumeUrl: "https://drive.google.com/file/d/1FNYt1cO2jRd84h5WFjjU4xan4ALtNFsK/view?usp=drivesdk", // link to your resume PDF
 
   // About card
   fullName: "Nirvigna Dumalwad",
   location: "Hyderabad, India · UTC+5:30",
   about: [
     "I'm a pre-final-year CS student fascinated by the way machines learn and how good software feels in the hand. My work spans deep learning research, full-stack engineering, and the quiet craft of building products that respect their users.",
-    "When I'm not shipping, I'm grinding DSA, reading systems papers, or sketching interfaces in Figma. I believe the best engineers are equal parts scientist, designer, and storyteller.",
+    "When I'm not shipping, I'm grinding DSA, reading systems papers, or sketching interfaces in Canva. I believe the best engineers are equal parts scientist, designer, and storyteller.",
   ],
   highlights: [
     { icon: "GraduationCap", title: "B.Tech CSE", subtitle: "CMRCET · 2023–27" },
