@@ -27,7 +27,7 @@ export const profile = {
   roles: ["AI/ML Enthusiast", "Full Stack Developer", "Problem Solver", "Tech Explorer"],
   tagline:
     "I craft intelligent systems and elegant interfaces — bridging machine learning research with production-grade web experiences.",
-  resumeUrl: https://drive.google.com/file/d/1_GL3E0LdHxPGqku639Ywd77JbPr84LDe/view?usp=drivesdk, 
+  resumeUrl:"https://drive.google.com/file/d/1_GL3E0LdHxPGqku639Ywd77JbPr84LDe/view?usp=drivesdk", 
 
   // About card
   fullName: "Nirvigna Dumalwad",
